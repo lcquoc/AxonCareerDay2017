@@ -1,0 +1,27 @@
+﻿<div class="row border-bottom">
+    <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary" id="topMenuNavbar" href="#"><i class="fa fa-bars"></i> </a>
+            <span class="aap-name">Personal Finance Management</span>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+            <li>
+                <div id="clock" class="light">
+                    <div class="display">
+                        <div class="weekdays"></div>
+                        <div class="ampm"></div>
+                        <div class="logout">
+                            <a href="javascript:document.getElementById('logoutForm').submit()">
+                                <i class="fa fa-sign-out"></i>
+                            </a>
+                            <form action=@Url.Action("LogOff", "Account", null) method="POST" role="form" id="logoutForm">
+                                @Html.AntiForgeryToken()
+                            </form>
+                        </div>
+                        <div class="digits"></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</div>

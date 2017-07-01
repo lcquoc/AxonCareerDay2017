@@ -1,0 +1,32 @@
+﻿<div class="dropdown profile-element">
+    <span>
+        <img alt=":: Personal Finance Management ::" class="img-circle" style="max-width: 40%" src="https://d30y9cdsu7xlg0.cloudfront.net/png/17241-200.png" />
+    </span>
+    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+        <span class="dropdown-toggle clear">
+            <span class="block m-t-xs">
+                <strong class="font-bold">Người dùng</strong> <b class="caret"></b>
+            </span>
+        </span>
+    </a>
+    <ul class="dropdown-menu animated fadeInUp m-t-xs profile-menu-bg">
+        <li>
+            <a id="ChangePassword">Đổi mật khẩu</a>
+        </li>
+
+        <li class="divider"></li>
+
+        <li>
+            <a href="javascript:document.getElementById('logoutForm').submit()">
+                Đăng xuất
+            </a>
+            <form action=@Url.Action("LogOff", "Account", null) method="POST" role="form" id="logoutForm">
+                @Html.AntiForgeryToken()
+            </form>
+        </li>
+    </ul>
+
+</div>
+<div class="logo-element">
+    <img alt=":: Personal Finance Management ::" class="img-circle" style="max-width: 40%" src="https://d30y9cdsu7xlg0.cloudfront.net/png/17241-200.png" />
+</div>

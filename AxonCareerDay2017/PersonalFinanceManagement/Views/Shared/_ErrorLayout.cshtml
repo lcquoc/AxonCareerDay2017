@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript">
+        var baseUrl = '@Href("~/")';
+    </script>
+
+    <title>Có lỗi xảy ra :-(</title>
+    <link rel="icon" href="@Url.Content("~/Images/favicon.ico")" type="image/x-icon">
+
+    <!-- Basic Style -->
+    @Styles.Render("~/bundles/ErrorPageStyle")
+
+</head>
+
+<body class="gray-bg">
+    
+    <div class="middle-box text-center animated fadeInDown">
+        @RenderBody()
+    </div>
+
+    <!-- Basic Script -->
+    @Scripts.Render("~/bundles/BasicScript")
+
+</body>
+
+</html>
